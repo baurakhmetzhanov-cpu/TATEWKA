@@ -2,7 +2,7 @@
 
 // Контакты для блока «Обсудим пилот» и формы заявки.
 // Пока поля пустые, контакты на странице не показываются, а форма
-// подсказывает, что адрес не настроен.
+// подсказывает, что приём заявок не настроен.
 const CONTACT = {
   email: '',     // например: 'sales@example.kz' — сюда придут заявки из формы
   phone: '',     // например: '+7 700 000 00 00'
@@ -12,13 +12,9 @@ const CONTACT = {
 (function () {
   const $ = (sel, root = document) => root.querySelector(sel);
   const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  // ---------- header ----------
-  const header = $('.header');
-  const onScroll = () => header.classList.toggle('is-scrolled', window.scrollY > 8);
-  onScroll();
-  window.addEventListener('scroll', onScroll, { passive: true });
-
+  // ---------- меню ----------
   const toggle = $('.nav-toggle');
   const nav = $('#nav');
   const closeNav = () => {
@@ -35,22 +31,66 @@ const CONTACT = {
   $$('#nav a').forEach((a) => a.addEventListener('click', closeNav));
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeNav(); });
 
-  // ---------- reveal on scroll ----------
-  const revealTargets = $$('.section__head, .pain, .flow, .card, .role, .exchange__row, .feature, .calc, .timeline li, .target, .faq, .contact > *');
-  if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    revealTargets.forEach((el) => el.classList.add('reveal'));
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          io.unobserve(entry.target);
-        }
-      });
-    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
-    revealTargets.forEach((el) => io.observe(el));
+  // ---------- путь заказа на первом экране ----------
+  // Без JS и при «уменьшить движение» накладная сразу показана целиком.
+  const slip = $('#slip');
+  const steps = $$('#track li');
+  const replay = $('#replay');
+  let timers = [];
+
+  const playTrack = () => {
+    timers.forEach(clearTimeout);
+    timers = [];
+    replay.hidden = true;
+    slip.classList.remove('is-playing');
+    steps.forEach((li, i) => li.classList.toggle('is-done', i === 0));
+    slip.classList.add('is-waiting');
+    void slip.offsetWidth; // перезапуск CSS-анимации
+    slip.classList.add('is-playing');
+
+    steps.slice(1).forEach((li, i) => {
+      timers.push(setTimeout(() => li.classList.add('is-done'), 700 * (i + 1) + 300));
+    });
+    const end = 700 * steps.length + 300;
+    timers.push(setTimeout(() => slip.classList.remove('is-waiting'), end));
+    timers.push(setTimeout(() => { replay.hidden = false; }, end + 600));
+  };
+
+  if (!reducedMotion) {
+    playTrack();
+    replay.addEventListener('click', playTrack);
   }
 
-  // ---------- calculator ----------
+  // ---------- вкладки «Кому полезно» ----------
+  const tabs = $$('.tab');
+  const selectTab = (tab, focus) => {
+    tabs.forEach((t) => {
+      const on = t === tab;
+      t.setAttribute('aria-selected', String(on));
+      t.tabIndex = on ? 0 : -1;
+      const panel = document.getElementById(t.getAttribute('aria-controls'));
+      panel.hidden = !on;
+      if (on) {
+        panel.classList.remove('is-entering');
+        void panel.offsetWidth;
+        panel.classList.add('is-entering');
+      }
+    });
+    if (focus) tab.focus();
+  };
+  tabs.forEach((tab, i) => {
+    tab.addEventListener('click', () => selectTab(tab, false));
+    tab.addEventListener('keydown', (e) => {
+      let next = null;
+      if (e.key === 'ArrowRight') next = tabs[(i + 1) % tabs.length];
+      if (e.key === 'ArrowLeft') next = tabs[(i - 1 + tabs.length) % tabs.length];
+      if (e.key === 'Home') next = tabs[0];
+      if (e.key === 'End') next = tabs[tabs.length - 1];
+      if (next) { e.preventDefault(); selectTab(next, true); }
+    });
+  });
+
+  // ---------- калькулятор ----------
   const fmtInt = new Intl.NumberFormat('ru-RU', { maximumFractionDigits: 0 });
   const fmt1 = new Intl.NumberFormat('ru-RU', { minimumFractionDigits: 1, maximumFractionDigits: 1 });
 
@@ -98,7 +138,7 @@ const CONTACT = {
   Object.values(inputs).forEach((el) => el.addEventListener('input', calc));
   calc();
 
-  // ---------- contacts ----------
+  // ---------- контакты ----------
   const list = $('#contact-list');
   const items = [];
   if (CONTACT.phone) items.push(`Телефон: <a href="tel:${CONTACT.phone.replace(/[^\d+]/g, '')}">${CONTACT.phone}</a>`);
@@ -107,7 +147,7 @@ const CONTACT = {
   list.innerHTML = items.map((t) => `<li>${t}</li>`).join('');
   list.hidden = items.length === 0;
 
-  // ---------- lead form ----------
+  // ---------- форма заявки ----------
   const form = $('#lead-form');
   const note = $('#form-note');
 
@@ -151,6 +191,6 @@ const CONTACT = {
 
   $$('[required]', form).forEach((el) => el.addEventListener('input', () => el.classList.remove('is-invalid')));
 
-  // ---------- footer year ----------
+  // ---------- год в подвале ----------
   $('#year').textContent = new Date().getFullYear();
 })();

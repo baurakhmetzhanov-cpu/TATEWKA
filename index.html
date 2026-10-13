@@ -3,16 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Татешка — заказы B/C-магазинов без визита торгового представителя</title>
+  <title>Татешка&nbsp;— заказы B/C-магазинов без визита торгового представителя</title>
   <meta name="description" content="B2B-платформа для дистрибьюторов и магазинов Казахстана: самостоятельный заказ, согласование владельцем, фотоотчёт по выкладке, бонусы и обмен с 1С.">
   <meta name="theme-color" content="#0f766e">
   <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
-  <meta property="og:title" content="Татешка — B2B-платформа заказов «магазин → дистрибьютор»">
+  <meta property="og:title" content="Татешка&nbsp;— B2B-платформа заказов «магазин → дистрибьютор»">
   <meta property="og:description" content="Магазин заказывает сам, дистрибьютор сохраняет контроль: заказы, фотоаудит выкладки, бонусы и 1С в одном контуре.">
   <meta property="og:locale" content="ru_KZ">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
@@ -20,9 +20,9 @@
 <a class="skip" href="#main">Перейти к содержимому</a>
 
 <header class="header" id="top">
-  <div class="container header__inner">
-    <a class="logo" href="#top" aria-label="Татешка — на главную">
-      <img src="assets/icon.svg" alt="" width="36" height="36">
+  <div class="wrap header__inner">
+    <a class="logo" href="#top" aria-label="Татешка&nbsp;— на главную">
+      <img src="assets/icon.svg" alt="" width="32" height="32">
       <span>Татешка</span>
     </a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Открыть меню">
@@ -43,331 +43,264 @@
 
 <main id="main">
 
-  <!-- HERO -->
+  <!-- Первый экран: заказ проходит путь от продавца до доставки -->
   <section class="hero">
-    <div class="container hero__inner">
+    <div class="wrap hero__inner">
       <div class="hero__text">
-        <p class="eyebrow eyebrow--light">B2B-платформа заказов · Казахстан</p>
-        <h1>Магазин заказывает сам.<br><span class="hl">Дистрибьютор сохраняет контроль.</span></h1>
-        <p class="lead">
+        <h1>Магазин заказывает сам. Дистрибьютор сохраняет контроль.</h1>
+        <p class="hero__lead">
           Татешка переводит B/C-магазины на самостоятельные заказы. Продавец собирает заявку
           и фотоотчёт по выкладке, владелец согласует, заказ уходит в&nbsp;1С, а&nbsp;магазин получает бонусы.
-          Торговые представители — на ключевых клиентов.
+          Торговые представители&nbsp;— на ключевых клиентов.
         </p>
         <div class="hero__cta">
           <a class="btn btn--primary" href="#contact">Обсудить пилот</a>
-          <a class="btn btn--ghost" href="#how">Как это работает</a>
+          <a class="btn btn--line" href="#how">Как это работает</a>
         </div>
-        <ul class="hero__chips" aria-label="Ключевые особенности">
-          <li>Двусторонний обмен с 1С</li>
-          <li>Работает при слабом интернете</li>
-          <li>Русский и казахский</li>
-        </ul>
+        <p class="hero__facts">Двусторонний обмен с 1С. Работает при слабом интернете. Русский и казахский язык.</p>
       </div>
 
-      <div class="hero__visual" aria-hidden="true">
-        <div class="phone">
-          <div class="phone__notch"></div>
-          <div class="screen">
-            <div class="screen__bar">
-              <span class="screen__title">Каталог</span>
-              <span class="screen__pill">Дистрибьютор&nbsp;A</span>
+      <figure class="desk" aria-label="Пример: путь заказа магазина от продавца до доставки">
+        <div class="slip" id="slip">
+          <div class="slip__head">
+            <div>
+              <p class="slip__title">Заказ № 1042</p>
+              <p class="slip__meta">Магазин «Береке», Алматы</p>
             </div>
-            <div class="screen__search">Поиск или штрих-код</div>
-            <div class="screen__cats">
-              <span class="is-active">Напитки</span><span>Снеки</span><span>Бакалея</span>
-            </div>
-            <div class="sku">
-              <div class="sku__img sku__img--a"></div>
-              <div class="sku__body"><b>Вода минеральная 0,5&nbsp;л</b><small>упак. 12 шт · в наличии</small></div>
-              <div class="sku__qty">×2</div>
-            </div>
-            <div class="sku">
-              <div class="sku__img sku__img--b"></div>
-              <div class="sku__body"><b>Чай чёрный, 100&nbsp;пак.</b><small>упак. 6 шт · в наличии</small></div>
-              <div class="sku__qty">×1</div>
-            </div>
-            <div class="sku">
-              <div class="sku__img sku__img--c"></div>
-              <div class="sku__body"><b>Печенье сахарное 300&nbsp;г</b><small>упак. 10 шт · мало</small></div>
-              <div class="sku__qty sku__qty--add">+</div>
-            </div>
-            <div class="screen__cart">
-              <span>Корзина · 3 позиции</span>
-              <b>Отправить владельцу</b>
-            </div>
+            <p class="slip__supplier">Дистрибьютор&nbsp;A</p>
           </div>
-        </div>
 
-        <div class="float float--approve">
-          <div class="float__head"><span class="dot dot--wait"></span>Заказ №1042</div>
-          <p>Ожидает согласования владельца</p>
-          <div class="float__actions"><span class="mini mini--ok">Согласовать</span><span class="mini">Вернуть</span></div>
+          <table class="slip__lines">
+            <thead>
+              <tr><th scope="col">Товар</th><th scope="col">Упак.</th><th scope="col">Сумма, ₸</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Вода минеральная 0,5&nbsp;л <small>по 12&nbsp;шт</small></td><td>2</td><td>4 800</td></tr>
+              <tr><td>Чай чёрный, 100&nbsp;пак. <small>по 6&nbsp;шт</small></td><td>1</td><td>9 000</td></tr>
+              <tr><td>Печенье сахарное 300&nbsp;г <small>по 10&nbsp;шт</small></td><td>3</td><td>13 500</td></tr>
+            </tbody>
+            <tfoot>
+              <tr><th scope="row" colspan="2">Итого</th><td>27 300</td></tr>
+            </tfoot>
+          </table>
+          <p class="slip__min">Минимальная сумма заказа 20 000 ₸&nbsp;— выполнена</p>
+
+          <ol class="track" id="track">
+            <li class="is-done"><span class="track__mark"></span><span class="track__text">Собран продавцом</span><time>09:12</time></li>
+            <li class="is-done"><span class="track__mark"></span><span class="track__text">Согласован владельцем</span><time>09:40</time></li>
+            <li class="is-done"><span class="track__mark"></span><span class="track__text">Принят в 1С</span><time>09:41</time></li>
+            <li class="is-done"><span class="track__mark"></span><span class="track__text">Отгружен со склада</span><time>14:05</time></li>
+            <li class="is-done"><span class="track__mark"></span><span class="track__text">Доставлен</span><time>17:30</time></li>
+          </ol>
+          <p class="slip__bonus" id="slip-bonus">+40 баллов за заказ</p>
         </div>
-        <div class="float float--bonus">
-          <div class="float__head"><span class="dot dot--ok"></span>Фотоотчёт принят</div>
-          <p><b>+20 баллов</b> · до бонусного товара 30%</p>
-          <div class="meter"><span style="width:70%"></span></div>
-        </div>
-      </div>
+        <button class="replay" type="button" id="replay" hidden>Показать путь заказа ещё раз</button>
+      </figure>
     </div>
   </section>
 
-  <!-- PROBLEM -->
+  <!-- Проблема -->
   <section class="section" id="problem">
-    <div class="container">
-      <div class="section__head">
-        <p class="eyebrow">Проблема</p>
-        <h2>Покрывать B/C-точки визитами — дорого и непрозрачно</h2>
-        <p class="section__lead">Для небольших магазинов стоимость визита торгового представителя часто несопоставима с прибылью от точки — особенно при большой территории и небольшом среднем заказе.</p>
+    <div class="wrap split">
+      <div class="split__head">
+        <h2>Покрывать B/C-точки визитами&nbsp;— дорого и непрозрачно</h2>
+        <p class="lead">Для небольших магазинов стоимость визита торгового представителя часто несопоставима с прибылью от точки&nbsp;— особенно при большой территории и небольшом среднем заказе.</p>
       </div>
-      <div class="grid grid--5">
-        <article class="pain">
-          <span class="pain__num">01</span>
-          <h3>Высокая стоимость покрытия</h3>
-          <p>ФОТ, автомобили, топливо, связь, маршруты и контроль полевой команды.</p>
-        </article>
-        <article class="pain">
-          <span class="pain__num">02</span>
-          <h3>Непрозрачное исполнение</h3>
-          <p>Заказы и фотоотчёты зависят от дисциплины конкретного представителя.</p>
-        </article>
-        <article class="pain">
-          <span class="pain__num">03</span>
-          <h3>Редкий контакт</h3>
-          <p>Магазин заказывает только во время визита или через мессенджеры и звонки.</p>
-        </article>
-        <article class="pain">
-          <span class="pain__num">04</span>
-          <h3>Нет мотивации магазина</h3>
-          <p>Выкладку проверяют эпизодически, и она не связана с понятным вознаграждением.</p>
-        </article>
-        <article class="pain">
-          <span class="pain__num">05</span>
-          <h3>Разрозненные данные</h3>
-          <p>1С, мессенджеры, фотографии и отчёты живут отдельно друг от друга.</p>
-        </article>
-      </div>
-      <p class="callout">
-        <b>Наш подход:</b> не «уволить торговых представителей», а перевести B/C-точки на самообслуживание
+      <dl class="pains">
+        <div><dt>Высокая стоимость покрытия</dt><dd>ФОТ, автомобили, топливо, связь, маршруты и контроль полевой команды.</dd></div>
+        <div><dt>Непрозрачное исполнение</dt><dd>Заказы и фотоотчёты зависят от дисциплины конкретного представителя.</dd></div>
+        <div><dt>Редкий контакт</dt><dd>Магазин заказывает только во время визита или через мессенджеры и звонки.</dd></div>
+        <div><dt>Нет мотивации магазина</dt><dd>Выкладку проверяют эпизодически, и она не связана с понятным вознаграждением.</dd></div>
+        <div><dt>Разрозненные данные</dt><dd>1С, мессенджеры, фотографии и отчёты живут отдельно друг от друга.</dd></div>
+      </dl>
+    </div>
+    <div class="wrap">
+      <p class="approach">
+        Наш подход&nbsp;— не «уволить торговых представителей», а перевести B/C-точки на самообслуживание
         и направить освободившихся людей на A-клиентов, переговоры и запуск новых SKU.
       </p>
     </div>
   </section>
 
-  <!-- HOW IT WORKS -->
-  <section class="section section--tint" id="how">
-    <div class="container">
-      <div class="section__head">
-        <p class="eyebrow">Как это работает</p>
-        <h2>Заказ, выкладка и бонусы — в одном процессе</h2>
-        <p class="section__lead">Один магазин может работать с несколькими дистрибьюторами. Каждый дистрибьютор видит только свои товары, цены, заказы, фотоотчёты и кампании.</p>
-      </div>
+  <!-- Как это работает -->
+  <section class="section section--wash" id="how">
+    <div class="wrap">
+      <h2 class="section__title">Заказ, выкладка и бонусы&nbsp;— в одном процессе</h2>
+      <p class="lead">Один магазин может работать с несколькими дистрибьюторами. Каждый дистрибьютор видит только свои товары, цены, заказы, фотоотчёты и кампании.</p>
 
       <div class="flows">
-        <article class="flow">
-          <header class="flow__head">
-            <span class="flow__icon"><svg viewBox="0 0 24 24"><path d="M3 4h2l2.4 10.2a1 1 0 0 0 1 .8h8.9a1 1 0 0 0 1-.8L20 8H6.2"/><circle cx="9" cy="19" r="1.5"/><circle cx="17" cy="19" r="1.5"/></svg></span>
-            <h3>Заказ</h3>
-          </header>
+        <div class="flow">
+          <h3 class="flow__title">Заказ</h3>
           <ol class="steps">
             <li><b>Продавец</b> открывает каталог своего дистрибьютора: персональные цены, остатки, кратность упаковки. Добавляет товары поиском или сканером штрих-кода.</li>
             <li><b>Владелец</b> согласует заявку или возвращает её с комментарием. Согласование можно сделать обязательным или отключить.</li>
-            <li><b>Заказ уходит в 1С</b> дистрибьютора — без дублей, с подтверждением, резервом и отгрузкой.</li>
+            <li><b>Заказ уходит в 1С</b> дистрибьютора&nbsp;— без дублей, с подтверждением, резервом и отгрузкой.</li>
             <li><b>Магазин видит статус</b> на каждом шаге и повторяет прошлый заказ в один клик.</li>
           </ol>
-        </article>
-
-        <article class="flow">
-          <header class="flow__head">
-            <span class="flow__icon"><svg viewBox="0 0 24 24"><path d="M4 8a2 2 0 0 1 2-2h2l1.5-2h5L16 6h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><circle cx="12" cy="12.5" r="3.5"/></svg></span>
-            <h3>Выкладка</h3>
-          </header>
+        </div>
+        <div class="flow">
+          <h3 class="flow__title">Выкладка</h3>
           <ol class="steps">
             <li><b>РОП публикует задание</b>: эталон планограммы, SKU, срок, чек-лист и обязательные ракурсы.</li>
             <li><b>Продавец фотографирует полку</b> встроенной камерой с подсказкой по выкладке. Время, точка и задание фиксируются автоматически.</li>
             <li><b>РОП проверяет</b> фото рядом с эталоном: принять, отклонить или запросить повторное фото.</li>
           </ol>
-        </article>
-
-        <article class="flow">
-          <header class="flow__head">
-            <span class="flow__icon"><svg viewBox="0 0 24 24"><rect x="3.5" y="9" width="17" height="11" rx="1.5"/><path d="M2.5 9h19M12 9v11M12 9c-1.5-3-5-4-5.5-1.5S9 9 12 9zm0 0c1.5-3 5-4 5.5-1.5S15 9 12 9z"/></svg></span>
-            <h3>Бонусы</h3>
-          </header>
+        </div>
+        <div class="flow">
+          <h3 class="flow__title">Бонусы</h3>
           <ol class="steps">
-            <li><b>Баллы начисляются</b> за заказы, сумму, регулярность и принятые фотоотчёты — по правилам кампании дистрибьютора.</li>
+            <li><b>Баллы начисляются</b> за заказы, сумму, регулярность и принятые фотоотчёты&nbsp;— по правилам кампании дистрибьютора.</li>
             <li><b>Магазин видит шкалу прогресса</b>: сколько осталось и что для этого сделать.</li>
-            <li><b>Владелец выбирает бонусный товар</b> — он приезжает со следующей поставкой. Каждое начисление и списание видно в истории.</li>
+            <li><b>Владелец выбирает бонусный товар</b>&nbsp;— он приезжает со следующей поставкой. Каждое начисление и списание видно в истории.</li>
           </ol>
-        </article>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- MODULES -->
+  <!-- Возможности -->
   <section class="section" id="modules">
-    <div class="container">
-      <div class="section__head">
-        <p class="eyebrow">Возможности</p>
-        <h2>Всё, что нужно для работы с розницей без визита</h2>
-      </div>
-      <div class="grid grid--3">
-        <article class="card">
-          <span class="card__icon"><svg viewBox="0 0 24 24"><path d="M3 4h2l2.4 10.2a1 1 0 0 0 1 .8h8.9a1 1 0 0 0 1-.8L20 8H6.2"/><circle cx="9" cy="19" r="1.5"/><circle cx="17" cy="19" r="1.5"/></svg></span>
+    <div class="wrap">
+      <h2 class="section__title">Всё, что нужно для работы с розницей без визита</h2>
+      <div class="modules">
+        <div class="module">
+          <svg class="module__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.4 10.2a1 1 0 0 0 1 .8h8.9a1 1 0 0 0 1-.8L20 8H6.2"/><circle cx="9" cy="19" r="1.5"/><circle cx="17" cy="19" r="1.5"/></svg>
           <h3>Заказы</h3>
           <p>Каталог по дистрибьютору, поиск и штрих-коды, корзина с контролем минимальной суммы, согласование владельцем, статусы, частичная отгрузка, сборочный лист и выгрузка в Excel.</p>
-        </article>
-        <article class="card">
-          <span class="card__icon"><svg viewBox="0 0 24 24"><path d="M4 8a2 2 0 0 1 2-2h2l1.5-2h5L16 6h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><circle cx="12" cy="12.5" r="3.5"/></svg></span>
+        </div>
+        <div class="module">
+          <svg class="module__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8a2 2 0 0 1 2-2h2l1.5-2h5L16 6h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><circle cx="12" cy="12.5" r="3.5"/></svg>
           <h3>Фотоаудит выкладки</h3>
           <p>Задания по планограммам, съёмка с камеры, чек-листы, очередь проверки для РОП и сравнение с эталоном. Контроль мерчендайзинга без поездки в точку.</p>
-        </article>
-        <article class="card">
-          <span class="card__icon"><svg viewBox="0 0 24 24"><rect x="3.5" y="9" width="17" height="11" rx="1.5"/><path d="M2.5 9h19M12 9v11M12 9c-1.5-3-5-4-5.5-1.5S9 9 12 9zm0 0c1.5-3 5-4 5.5-1.5S15 9 12 9z"/></svg></span>
+        </div>
+        <div class="module">
+          <svg class="module__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="9" width="17" height="11" rx="1.5"/><path d="M2.5 9h19M12 9v11M12 9c-1.5-3-5-4-5.5-1.5S9 9 12 9zm0 0c1.5-3 5-4 5.5-1.5S15 9 12 9z"/></svg>
           <h3>Бонусный движок</h3>
           <p>Кампании и правила начисления, лимиты, шкала прогресса, каталог наград и журнал проводок. Магазину есть ради чего заказывать регулярно.</p>
-        </article>
-        <article class="card">
-          <span class="card__icon"><svg viewBox="0 0 24 24"><path d="M20 11a8 8 0 0 0-14.3-4.9M4 4v4h4M4 13a8 8 0 0 0 14.3 4.9M20 20v-4h-4"/></svg></span>
+        </div>
+        <div class="module">
+          <svg class="module__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11a8 8 0 0 0-14.3-4.9M4 4v4h4M4 13a8 8 0 0 0 14.3 4.9M20 20v-4h-4"/></svg>
           <h3>Обмен с 1С</h3>
-          <p>Товары, штрих-коды, цены, остатки и статусы — из 1С; одобренные заказы — в 1С. Повтор при сбое, журнал обмена и очередь ошибок для оператора.</p>
-        </article>
-        <article class="card">
-          <span class="card__icon"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span>
+          <p>Товары, штрих-коды, цены, остатки и статусы&nbsp;— из 1С; одобренные заказы&nbsp;— в 1С. Повтор при сбое, журнал обмена и очередь ошибок для оператора.</p>
+        </div>
+        <div class="module">
+          <svg class="module__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>
           <h3>Аналитика</h3>
           <p>Выручка, заказы, активные точки, средний чек, топ-SKU, доля одобренных фотоотчётов и точки с риском оттока.</p>
-        </article>
-        <article class="card">
-          <span class="card__icon"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span>
+        </div>
+        <div class="module">
+          <svg class="module__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg>
           <h3>Роли и безопасность</h3>
           <p>Каждый дистрибьютор видит только свои данные. Роли для администратора, РОП и оператора, журнал критических действий.</p>
-        </article>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ROLES -->
-  <section class="section section--tint" id="roles">
-    <div class="container">
-      <div class="section__head">
-        <p class="eyebrow">Кому полезно</p>
-        <h2>Каждый участник получает своё</h2>
+  <!-- Кому полезно -->
+  <section class="section section--wash" id="roles">
+    <div class="wrap">
+      <h2 class="section__title">Каждый участник получает своё</h2>
+      <div class="tabs" role="tablist" aria-label="Участники">
+        <button class="tab" role="tab" id="tab-dist" aria-controls="panel-dist" aria-selected="true">Дистрибьютору</button>
+        <button class="tab" role="tab" id="tab-rop" aria-controls="panel-rop" aria-selected="false" tabindex="-1">РОП</button>
+        <button class="tab" role="tab" id="tab-owner" aria-controls="panel-owner" aria-selected="false" tabindex="-1">Владельцу магазина</button>
+        <button class="tab" role="tab" id="tab-seller" aria-controls="panel-seller" aria-selected="false" tabindex="-1">Продавцу</button>
       </div>
-      <div class="roles">
-        <article class="role role--dist">
-          <p class="role__tag">Дистрибьютору</p>
-          <h3>Меньше затрат на покрытие — больше заказов вне визитов</h3>
-          <ul class="ticks">
-            <li>Снижение стоимости обслуживания B/C-точек</li>
-            <li>Заказы в любое время, а не только в день визита</li>
-            <li>Контроль выкладки по фото, без поездок</li>
-            <li>Единые данные по заказам, точкам и бонусам рядом с 1С</li>
-          </ul>
-        </article>
-        <article class="role">
-          <p class="role__tag">РОП</p>
-          <h3>Проверка выкладки и кампании — в одном окне</h3>
-          <ul class="ticks">
-            <li>Очередь фотоотчётов вместо ручной проверки в мессенджерах</li>
-            <li>Планограммы с рассылкой по точкам</li>
-            <li>Баллы начисляются автоматически после проверки</li>
-          </ul>
-        </article>
-        <article class="role">
-          <p class="role__tag">Владельцу магазина</p>
-          <h3>Контроль закупок без лишних звонков</h3>
-          <ul class="ticks">
-            <li>Согласование заявок продавцов</li>
-            <li>Прозрачные статусы и история заказов</li>
-            <li>Бонусный товар к следующей поставке</li>
-            <li>Бесплатно для магазина</li>
-          </ul>
-        </article>
-        <article class="role">
-          <p class="role__tag">Продавцу</p>
-          <h3>Заказ за несколько минут</h3>
-          <ul class="ticks">
-            <li>Понятный каталог, поиск и сканер штрих-кода</li>
-            <li>Корзина сохраняется даже без интернета</li>
-            <li>Фотоотчёт с подсказкой, как должна выглядеть полка</li>
-          </ul>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- 1C -->
-  <section class="section section--dark" id="onec">
-    <div class="container onec">
-      <div class="onec__text">
-        <p class="eyebrow eyebrow--light">Интеграция с 1С</p>
-        <h2>1С остаётся системой учёта. Татешка — системой взаимодействия.</h2>
-        <p class="section__lead">Мы не заменяем вашу ERP. Платформа подключается к 1С через типовой контракт обмена — HTTP-сервисы или обмен файлами — и не требует переписывать учёт под каждого клиента.</p>
-        <ul class="onec__props">
-          <li><b>Без дублей.</b> Каждый заказ передаётся один раз, даже при повторной отправке.</li>
-          <li><b>Устойчиво к сбоям.</b> Сообщения повторяются автоматически, ошибки попадают в очередь для оператора.</li>
-          <li><b>История сохраняется.</b> Новые цены и остатки не переписывают строки прошлых заказов.</li>
+      <div class="panel" role="tabpanel" id="panel-dist" aria-labelledby="tab-dist" tabindex="0">
+        <h3>Меньше затрат на покрытие&nbsp;— больше заказов вне визитов</h3>
+        <ul class="ticks">
+          <li>Снижение стоимости обслуживания B/C-точек</li>
+          <li>Заказы в любое время, а не только в день визита</li>
+          <li>Контроль выкладки по фото, без поездок</li>
+          <li>Единые данные по заказам, точкам и бонусам рядом с 1С</li>
         </ul>
       </div>
-      <div class="exchange" role="table" aria-label="Что передаётся между 1С и Татешкой">
-        <div class="exchange__row" role="row">
-          <div class="exchange__dir" role="cell"><span>1С</span><i>→</i><span>Татешка</span></div>
-          <div class="exchange__data" role="cell">Товары, штрих-коды, фото, цены по магазину, остатки, промо, лимиты</div>
-        </div>
-        <div class="exchange__row" role="row">
-          <div class="exchange__dir exchange__dir--out" role="cell"><span>Татешка</span><i>→</i><span>1С</span></div>
-          <div class="exchange__data" role="cell">Одобренные заказы, бонусные позиции, комментарии, идентификатор магазина</div>
-        </div>
-        <div class="exchange__row" role="row">
-          <div class="exchange__dir" role="cell"><span>1С</span><i>→</i><span>Татешка</span></div>
-          <div class="exchange__data" role="cell">Подтверждение, резерв, отгрузка, частичная отгрузка, отмена</div>
-        </div>
+      <div class="panel" role="tabpanel" id="panel-rop" aria-labelledby="tab-rop" tabindex="0" hidden>
+        <h3>Проверка выкладки и кампании&nbsp;— в одном окне</h3>
+        <ul class="ticks">
+          <li>Очередь фотоотчётов вместо ручной проверки в мессенджерах</li>
+          <li>Планограммы с рассылкой по точкам</li>
+          <li>Баллы начисляются автоматически после проверки</li>
+        </ul>
+      </div>
+      <div class="panel" role="tabpanel" id="panel-owner" aria-labelledby="tab-owner" tabindex="0" hidden>
+        <h3>Контроль закупок без лишних звонков</h3>
+        <ul class="ticks">
+          <li>Согласование заявок продавцов</li>
+          <li>Прозрачные статусы и история заказов</li>
+          <li>Бонусный товар к следующей поставке</li>
+          <li>Бесплатно для магазина</li>
+        </ul>
+      </div>
+      <div class="panel" role="tabpanel" id="panel-seller" aria-labelledby="tab-seller" tabindex="0" hidden>
+        <h3>Заказ за несколько минут</h3>
+        <ul class="ticks">
+          <li>Понятный каталог, поиск и сканер штрих-кода</li>
+          <li>Корзина сохраняется даже без интернета</li>
+          <li>Фотоотчёт с подсказкой, как должна выглядеть полка</li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <!-- FIELD CONDITIONS -->
+  <!-- 1С -->
+  <section class="section section--teal" id="onec">
+    <div class="wrap">
+      <h2 class="section__title">1С остаётся системой учёта. Татешка&nbsp;— системой взаимодействия.</h2>
+      <p class="lead">Мы не заменяем вашу ERP. Платформа подключается к 1С через типовой контракт обмена&nbsp;— HTTP-сервисы или обмен файлами&nbsp;— и не требует переписывать учёт под каждого клиента.</p>
+
+      <div class="bridge" role="table" aria-label="Что передаётся между 1С и Татешкой">
+        <div class="bridge__node bridge__node--left" aria-hidden="true">1С дистрибьютора</div>
+        <div class="bridge__flows">
+          <div class="bridge__row" role="row">
+            <span class="bridge__dir" role="cell">1С → Татешка</span>
+            <span class="bridge__arrow bridge__arrow--right" aria-hidden="true"></span>
+            <span class="bridge__data" role="cell">Товары, штрих-коды, фото, цены по магазину, остатки, промо, лимиты</span>
+          </div>
+          <div class="bridge__row" role="row">
+            <span class="bridge__dir" role="cell">Татешка → 1С</span>
+            <span class="bridge__arrow bridge__arrow--left" aria-hidden="true"></span>
+            <span class="bridge__data" role="cell">Одобренные заказы, бонусные позиции, комментарии, идентификатор магазина</span>
+          </div>
+          <div class="bridge__row" role="row">
+            <span class="bridge__dir" role="cell">1С → Татешка</span>
+            <span class="bridge__arrow bridge__arrow--right" aria-hidden="true"></span>
+            <span class="bridge__data" role="cell">Подтверждение, резерв, отгрузка, частичная отгрузка, отмена</span>
+          </div>
+        </div>
+        <div class="bridge__node bridge__node--right" aria-hidden="true">Татешка</div>
+      </div>
+
+      <dl class="guarantees">
+        <div><dt>Без дублей</dt><dd>Каждый заказ передаётся один раз, даже при повторной отправке.</dd></div>
+        <div><dt>Устойчиво к сбоям</dt><dd>Сообщения повторяются автоматически, ошибки попадают в очередь для оператора.</dd></div>
+        <div><dt>История сохраняется</dt><dd>Новые цены и остатки не переписывают строки прошлых заказов.</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- Условия розницы -->
   <section class="section" id="field">
-    <div class="container">
-      <div class="section__head">
-        <p class="eyebrow">Сделано для реальной розницы</p>
+    <div class="wrap split">
+      <div class="split__head">
         <h2>Бюджетный Android, слабый интернет, неподготовленный пользователь</h2>
-        <p class="section__lead">Для нас это основной сценарий, а не исключение.</p>
+        <p class="lead">Для нас это основной сценарий, а не исключение.</p>
       </div>
-      <div class="grid grid--4">
-        <article class="feature">
-          <span class="feature__icon"><svg viewBox="0 0 24 24"><path d="M2 8.5a15 15 0 0 1 20 0M5.5 12a10 10 0 0 1 13 0M9 15.5a5 5 0 0 1 6 0"/><circle cx="12" cy="19" r="1"/></svg></span>
-          <h3>Офлайн-режим</h3>
-          <p>Каталог кэшируется, корзина и фотоотчёты ждут связи и отправляются сами.</p>
-        </article>
-        <article class="feature">
-          <span class="feature__icon"><svg viewBox="0 0 24 24"><rect x="6.5" y="2.5" width="11" height="19" rx="2"/><path d="M10.5 18.5h3"/></svg></span>
-          <h3>Ставится на телефон</h3>
-          <p>Крупные кнопки, минимум текста, работает на недорогих смартфонах.</p>
-        </article>
-        <article class="feature">
-          <span class="feature__icon"><svg viewBox="0 0 24 24"><path d="M4 5h9M8.5 3v2M6 5c.5 3 2.5 5.5 5 7M11 5c-.5 3-3 6.5-6.5 8"/><path d="M12.5 21l4-10 4 10M14 17.5h5"/></svg></span>
-          <h3>Русский и казахский</h3>
-          <p>Язык переключается в профиле — для магазинов в любом регионе.</p>
-        </article>
-        <article class="feature">
-          <span class="feature__icon"><svg viewBox="0 0 24 24"><rect x="4.5" y="10.5" width="15" height="10" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg></span>
-          <h3>Подакцизные товары</h3>
-          <p>Каталог открыт только проверенным точкам, подключённым дистрибьютором. На табак не действуют бонусные механики.</p>
-        </article>
-      </div>
+      <dl class="pains">
+        <div><dt>Офлайн-режим</dt><dd>Каталог кэшируется, корзина и фотоотчёты ждут связи и отправляются сами.</dd></div>
+        <div><dt>Ставится на телефон</dt><dd>Крупные кнопки, минимум текста, работает на недорогих смартфонах.</dd></div>
+        <div><dt>Русский и казахский</dt><dd>Язык переключается в профиле&nbsp;— для магазинов в любом регионе.</dd></div>
+        <div><dt>Подакцизные товары</dt><dd>Каталог открыт только проверенным точкам, подключённым дистрибьютором. На табак не действуют бонусные механики.</dd></div>
+      </dl>
     </div>
   </section>
 
-  <!-- CALCULATOR -->
-  <section class="section section--tint" id="calc">
-    <div class="container">
-      <div class="section__head">
-        <p class="eyebrow">Калькулятор</p>
-        <h2>Сколько ресурса торговой команды можно перераспределить</h2>
-        <p class="section__lead">Введите свои данные — посчитаем, сколько ресурса торговых представителей освобождается, если часть B/C-точек перейдёт на самостоятельные заказы.</p>
-      </div>
+  <!-- Калькулятор -->
+  <section class="section section--wash" id="calc">
+    <div class="wrap">
+      <h2 class="section__title">Сколько ресурса торговой команды можно перераспределить</h2>
+      <p class="lead">Введите свои данные&nbsp;— посчитаем, сколько ресурса торговых представителей освобождается, если часть B/C-точек перейдёт на самостоятельные заказы.</p>
 
       <div class="calc">
         <form class="calc__inputs" id="calc-form" aria-label="Параметры расчёта">
@@ -402,23 +335,20 @@
           </div>
         </form>
 
-        <div class="calc__result" aria-live="polite">
-          <div class="kpi">
-            <span class="kpi__label">Точек на самообслуживании</span>
-            <span class="kpi__value" id="r-stores">500</span>
-          </div>
-          <div class="kpi">
-            <span class="kpi__label">Ресурс торговых представителей</span>
-            <span class="kpi__value"><span id="r-reps">5,0</span> <small>ТП</small></span>
-          </div>
-          <div class="kpi kpi--main">
-            <span class="kpi__label">Можно перераспределить в месяц</span>
-            <span class="kpi__value" id="r-month">3,5 млн ₸</span>
-            <span class="kpi__sub">≈ <span id="r-year">42 млн ₸</span> в год</span>
+        <div class="calc__sheet" aria-live="polite">
+          <p class="calc__sheet-title">Расчёт</p>
+          <dl class="leaders">
+            <div><dt>Точек на самообслуживании</dt><dd id="r-stores">500</dd></div>
+            <div><dt>Ресурс торговых представителей</dt><dd><span id="r-reps">5,0</span> ТП</dd></div>
+            <div><dt>В год</dt><dd id="r-year">42,0 млн ₸</dd></div>
+          </dl>
+          <div class="calc__total">
+            <span>Можно перераспределить в месяц</span>
+            <strong id="r-month">3,5 млн ₸</strong>
           </div>
           <p class="calc__note">
             Это оценка до вычета стоимости платформы и не обещание экономии. Реальный эффект
-            зависит от маршрутов, логистики и модели реорганизации — поэтому в пилоте мы фиксируем
+            зависит от маршрутов, логистики и модели реорганизации&nbsp;— поэтому в пилоте мы фиксируем
             стоимость покрытия точки до и после запуска.
           </p>
         </div>
@@ -426,53 +356,50 @@
     </div>
   </section>
 
-  <!-- PILOT -->
+  <!-- Пилот -->
   <section class="section" id="pilot">
-    <div class="container">
-      <div class="section__head">
-        <p class="eyebrow">Пилот</p>
-        <h2>Начинаем с измеримого пилота, а не с большого внедрения</h2>
-      </div>
+    <div class="wrap">
+      <h2 class="section__title">Начинаем с измеримого пилота, а не с большого внедрения</h2>
       <ol class="timeline">
         <li>
-          <span class="timeline__step">1</span>
           <h3>Диагностика</h3>
           <p>Разбираем маршруты, фактическую стоимость покрытия точки и конфигурацию вашей 1С. Фиксируем исходные показатели.</p>
         </li>
         <li>
-          <span class="timeline__step">2</span>
           <h3>Подключение</h3>
           <p>Настраиваем обмен с тестовой базой 1С, загружаем каталог и прайсы, приглашаем магазины.</p>
         </li>
         <li>
-          <span class="timeline__step">3</span>
           <h3>Пилот 8–12 недель</h3>
           <p>До 200 магазинов. Помогаем точкам с первыми заказами и фотоотчётами, собираем обратную связь.</p>
         </li>
         <li>
-          <span class="timeline__step">4</span>
           <h3>Решение по цифрам</h3>
           <p>Сравниваем с исходными показателями и решаем, как масштабировать: на все точки, филиалы и другие базы 1С.</p>
         </li>
       </ol>
 
-      <h3 class="subhead">Что измеряем в пилоте — целевые значения</h3>
-      <div class="targets">
-        <div class="target"><b>≥ 60%</b><span>магазинов активны через 60 дней</span></div>
-        <div class="target"><b>≥ 50%</b><span>заказов B/C-точек — без торгового представителя</span></div>
-        <div class="target"><b>≥ 70%</b><span>фотоотчётов принимаются после обучения</span></div>
-        <div class="target"><b>≥ 99%</b><span>успешных обменов с 1С</span></div>
-        <div class="target"><b>&lt; 5 мин</b><span>среднее время на заказ</span></div>
-        <div class="target"><b>&lt; 2 ч</b><span>медианное время согласования владельцем</span></div>
-      </div>
+      <table class="targets">
+        <caption>Что измеряем в пилоте</caption>
+        <thead>
+          <tr><th scope="col">Показатель</th><th scope="col">Цель</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Магазины, активные через 60 дней после подключения</td><td>≥ 60%</td></tr>
+          <tr><td>Заказы B/C-точек без торгового представителя</td><td>≥ 50%</td></tr>
+          <tr><td>Фотоотчёты, принятые после обучения</td><td>≥ 70%</td></tr>
+          <tr><td>Успешные обмены с 1С</td><td>≥ 99%</td></tr>
+          <tr><td>Среднее время на заказ</td><td>&lt; 5 мин</td></tr>
+          <tr><td>Медианное время согласования владельцем</td><td>&lt; 2 ч</td></tr>
+        </tbody>
+      </table>
     </div>
   </section>
 
-  <!-- FAQ -->
-  <section class="section section--tint" id="faq">
-    <div class="container container--narrow">
-      <div class="section__head section__head--center">
-        <p class="eyebrow">Вопросы</p>
+  <!-- Вопросы -->
+  <section class="section section--wash" id="faq">
+    <div class="wrap split">
+      <div class="split__head">
         <h2>Частые вопросы</h2>
       </div>
       <div class="faq">
@@ -490,7 +417,7 @@
         </details>
         <details>
           <summary>Согласование владельцем обязательно?</summary>
-          <p>Нет, это настройка для каждой точки. Где владелец хочет контролировать закупки — включаем согласование. Где не нужно — продавец отправляет заказ сразу.</p>
+          <p>Нет, это настройка для каждой точки. Где владелец хочет контролировать закупки&nbsp;— включаем согласование. Где не нужно&nbsp;— продавец отправляет заказ сразу.</p>
         </details>
         <details>
           <summary>Как быть с табачной продукцией?</summary>
@@ -498,24 +425,23 @@
         </details>
         <details>
           <summary>Как защищены данные?</summary>
-          <p>Каждый дистрибьютор видит только свои товары, цены, магазины и заказы — это проверяется на каждом запросе. Есть роли доступа и журнал критических действий. Мы собираем минимум персональных данных: телефон, имя, роль. Платформу можно развернуть на казахстанской площадке.</p>
+          <p>Каждый дистрибьютор видит только свои товары, цены, магазины и заказы&nbsp;— это проверяется на каждом запросе. Есть роли доступа и журнал критических действий. Мы собираем минимум персональных данных: телефон, имя, роль. Платформу можно развернуть на казахстанской площадке.</p>
         </details>
         <details>
           <summary>Сколько это стоит для магазина?</summary>
-          <p>Для магазина — бесплатно. Платформу оплачивает дистрибьютор по подписке.</p>
+          <p>Для магазина&nbsp;— бесплатно. Платформу оплачивает дистрибьютор по подписке.</p>
         </details>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section class="section section--dark" id="contact">
-    <div class="container contact">
+  <!-- Заявка -->
+  <section class="section section--teal" id="contact">
+    <div class="wrap contact">
       <div class="contact__text">
-        <p class="eyebrow eyebrow--light">Пилот</p>
         <h2>Обсудим пилот для вашей дистрибуции</h2>
-        <p class="section__lead">Расскажите о компании — разберём ваши маршруты, 1С и покажем платформу на демо-данных.</p>
-        <ul class="contact__list" id="contact-list"></ul>
+        <p class="lead">Расскажите о компании&nbsp;— разберём ваши маршруты, 1С и покажем платформу на демо-данных.</p>
+        <ul class="contact__list" id="contact-list" hidden></ul>
       </div>
       <form class="form" id="lead-form" novalidate>
         <div class="form__row">
@@ -555,9 +481,9 @@
 </main>
 
 <footer class="footer">
-  <div class="container footer__inner">
-    <a class="logo logo--footer" href="#top">
-      <img src="assets/icon.svg" alt="" width="28" height="28">
+  <div class="wrap footer__inner">
+    <a class="logo" href="#top">
+      <img src="assets/icon.svg" alt="" width="26" height="26">
       <span>Татешка</span>
     </a>
     <p>B2B-платформа заказов «магазин → дистрибьютор». Алматы, Казахстан.</p>

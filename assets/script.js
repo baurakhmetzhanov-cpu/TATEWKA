@@ -1,12 +1,12 @@
 // Татешка — сайт продукта.
 
 // Контакты для блока «Обсудим пилот» и формы заявки.
-// Пока поля пустые, контакты на странице не показываются, а форма
-// подсказывает, что приём заявок не настроен.
+// Форма отправляет заявку в WhatsApp, если он указан, иначе — письмом на email.
+// Пустые поля на странице не показываются.
 const CONTACT = {
-  email: '',     // например: 'sales@example.kz' — сюда придут заявки из формы
-  phone: '',     // например: '+7 700 000 00 00'
-  whatsapp: '',  // номер только цифрами, например: '77000000000'
+  email: '',                  // например: 'sales@example.kz'
+  phone: '+7 747 333 05 33',
+  whatsapp: '77473330533',    // номер только цифрами
 };
 
 (function () {
@@ -150,6 +150,15 @@ const CONTACT = {
   // ---------- форма заявки ----------
   const form = $('#lead-form');
   const note = $('#form-note');
+  const submit = $('.form__submit', form);
+  const channel = CONTACT.whatsapp ? 'whatsapp' : CONTACT.email ? 'email' : null;
+
+  if (channel === 'whatsapp') {
+    submit.textContent = 'Отправить заявку в WhatsApp';
+    note.textContent = 'Откроется WhatsApp с готовым сообщением — останется нажать «Отправить».';
+  } else if (channel === 'email') {
+    note.textContent = 'Нажимая кнопку, вы откроете почтовую программу с готовым письмом.';
+  }
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -167,26 +176,34 @@ const CONTACT = {
       return;
     }
 
-    if (!CONTACT.email) {
+    if (!channel) {
       note.textContent = 'Приём заявок ещё не настроен.';
       note.classList.add('is-error');
       return;
     }
 
     const data = new FormData(form);
+    const subject = `Заявка на пилот — ${data.get('company')}`;
     const body = [
       `Имя: ${data.get('name')}`,
       `Компания: ${data.get('company')}`,
       `Телефон: ${data.get('phone')}`,
       `Кто: ${data.get('role')}`,
       `Точек: ${data.get('stores') || '—'}`,
-      '',
-      `${data.get('message') || ''}`,
-    ].join('\n');
-    const subject = `Заявка на пилот — ${data.get('company')}`;
-    window.location.href = `mailto:${CONTACT.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    note.textContent = 'Открываем почтовую программу…';
+      data.get('message') ? `\n${data.get('message')}` : '',
+    ].join('\n').trim();
+
     note.classList.remove('is-error');
+    if (channel === 'whatsapp') {
+      const url = `https://wa.me/${CONTACT.whatsapp}?text=${encodeURIComponent(subject + '\n\n' + body)}`;
+      const win = window.open(url, '_blank');
+      if (win) win.opener = null;
+      else window.location.href = url;
+      note.textContent = 'Открываем WhatsApp…';
+    } else {
+      window.location.href = `mailto:${CONTACT.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      note.textContent = 'Открываем почтовую программу…';
+    }
   });
 
   $$('[required]', form).forEach((el) => el.addEventListener('input', () => el.classList.remove('is-invalid')));
